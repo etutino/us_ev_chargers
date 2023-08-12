@@ -1,4 +1,4 @@
---Create the table for IEA 2023 Global EV Outlook
+--Creating the table for IEA 2023 Global EV Outlook
 CREATE TABLE ev_data (
 	region varchar(100), 
 	category varchar(100),
@@ -11,7 +11,7 @@ CREATE TABLE ev_data (
 );
 --Data for ev_data was inserted from the csv file using the pgAdmin import function
 
---Create another table for EV charging station data by state
+--Creating another table for EV charging station data by state
 CREATE TABLE ev_chargers (
 	station_name varchar(200),
 	street_address varchar(200), 
@@ -29,7 +29,7 @@ CREATE TABLE ev_chargers (
 );
 --Data for ev_chargers was inserted from the csv file using the pgAdmin import function
 
---Create another table for population by state
+--Creating another table for population by state
 CREATE TABLE state_pop (
 	state varchar(2), 
 	population numeric
@@ -90,7 +90,7 @@ INSERT INTO state_pop VALUES ('WV', 1775156);
 INSERT INTO state_pop VALUES ('WY', 581381); 
 
 
---Create another table for population by state
+--Creating another table for population by state
 CREATE TABLE lane_miles (
 	state varchar(2), 
 	lane_miles numeric
@@ -161,7 +161,7 @@ WHERE
 	parameter IN('EV charging points', 'EV sales');
 
 
---Quearying the EV charging data by state and joining with the popuation data
+--Querying the EV charging data by state and joining with the popuation data
 WITH charging_data AS (
 	SELECT 
 		state,
